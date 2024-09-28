@@ -6,7 +6,9 @@
   box-sizing: border-box;
 }
 body {
-  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding-block: 2rem;
   height: 100vh;
   font-family: Poppins, sans-serif;
   background: linear-gradient(to bottom, #ff5e88, #ff9966);
@@ -21,9 +23,8 @@ h3 {
   font-weight: 600;
 }
 .calendar {
-  margin: auto;
-  width: 98%;
-  max-width: 380px;
+  margin: 0 auto;
+  width: clamp(320px, 400px, 98%);
   padding: 1rem;
   background: #fff;
   border-radius: 10px;
@@ -46,9 +47,12 @@ h3 {
 }
 .calendar ul li {
   width: calc(100% / 7);
-  margin-top: 25px;
   position: relative;
   z-index: 2;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #prev,
 #next {

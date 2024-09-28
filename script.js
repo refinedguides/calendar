@@ -22,9 +22,13 @@ let month = date.getMonth();
 let year = date.getFullYear();
 
 function renderCalendar() {
+  // first day of the month
   const start = new Date(year, month, 1).getDay();
+  // last date of the month
   const endDate = new Date(year, month + 1, 0).getDate();
+  // last day of the month
   const end = new Date(year, month, endDate).getDay();
+  // last date of the previous month
   const endDatePrev = new Date(year, month, 0).getDate();
 
   let datesHtml = "";
